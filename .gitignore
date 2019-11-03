@@ -1,0 +1,6 @@
+#credentials
+localExecutor/credentials.json
+localExecutor/token.pickle
+restwebservice/credentials.json
+restwebservice/token.pickle
+localExecutor/myLog.log
