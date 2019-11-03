@@ -1,0 +1,15 @@
+<apex:page controller="test1">
+    <apex:pageBlock >   
+     <apex:form >
+        <apex:commandButton value="Do something" action="{!helloW}"/>
+    </apex:form>     
+    <apex:pageBlockSection title="RawResponse" >    
+        <apex:outputText title="raw response" value="{!result}"></apex:outputText>    
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Structure Format" >  
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
+
+
+

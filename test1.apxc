@@ -1,0 +1,68 @@
+public class test1 { 
+    
+    Public string result{get;set;}
+    
+     
+    public PageReference helloW() {
+        HttpRequest req = new HttpRequest();
+        
+        HttpResponse res = new HttpResponse();
+        
+        Http http = new Http();
+        
+        req.setEndpoint('http://ec2-54-188-100-247.us-west-2.compute.amazonaws.com:8080/process');
+        
+        req.setMethod('GET');
+        req.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        req.setTimeout(120000);
+        res = http.send(req);
+        if(res.getStatusCode() == 200){
+            result = res.getBody();
+        } else{
+               result = 'hello';
+        }
+        
+        return null;
+    }
+
+    public PageReference doSomething() {
+        HttpRequest req = new HttpRequest();
+        
+        HttpResponse res = new HttpResponse();
+        
+        Http http = new Http();
+        
+        req.setEndpoint('http://127.0.0.1:8080/process');
+        req.setTimeout(1000);
+        req.setMethod('GET');
+        req.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        
+        res = http.send(req);
+        if(res.getStatusCode() == 200){
+            result = res.getBody();
+        } else{
+               result = 'hello';
+        }
+        return null;
+    }
+
+
+    public string helloW{ get{
+        HttpRequest req = new HttpRequest();
+        
+        HttpResponse res = new HttpResponse();
+        
+        Http http = new Http();
+        
+        req.setEndpoint('http://127.0.0.1:8080/process');
+        req.setTimeout(1000);
+        req.setMethod('GET');
+        req.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        
+        res = http.send(req);    
+        return 'HHHH';
+        }set;}
+        
+      
+        
+}
